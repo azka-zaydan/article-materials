@@ -1,0 +1,13 @@
+services:
+  redis-race-condition:
+      image: redis:latest
+      container_name: redis-race-condition
+      restart: always
+      ports:
+        - "6378:6379"
+      volumes:
+        - /home/$USER:/root/redis
+      environment:
+        REDIS_PORT: "6379"
+        REDIS_DATABASES: "16"
+# quick redis instance

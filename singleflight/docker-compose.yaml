@@ -1,0 +1,11 @@
+services:
+  redis-singleflight:
+    image: redis:latest
+    container_name: redis-singleflight
+    restart: always
+    ports:
+      - "6379:6379"
+    environment:
+      REDIS_PORT: "6379"
+      REDIS_DATABASES: "16"
+# quick redis instance
